@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import Auth from "../pages/Auth/Auth";
 import Home from "../pages/Home";
-import useAuthStore from "../app/store/authStore";
+import useAuthStore from "../store/authStore";
+import Auth from "../pages/Auth";
 
 const AppRoutes = () => {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
