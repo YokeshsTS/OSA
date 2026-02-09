@@ -40,6 +40,27 @@
         align-items: flex-start;
         padding: 5%;
         color: white;
+        .companyName{
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .authLeftBottom{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+                margin-bottom: 2rem;
+            .authLeftTitle{
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+            }
+            .authLeftSubtitle{
+                font-size: 0.875rem;
+                color: #c7c7c7;
+                line-height: 1.5;
+            }
+        }
       }
     }
   }
@@ -84,16 +105,16 @@
 
 .auth-card {
   width: 100%;
-  max-width: 420px;
+  max-width: 550px;
   padding: 2.5rem;
-  background: #1a1a1e;
+//   background: #1a1a1e;
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   color: white;
 
   .auth-card-header {
     margin-bottom: 2rem;
-    text-align: left;
+    text-align: center;
 
     .auth-title {
       font-size: 1.75rem;
@@ -122,9 +143,9 @@
       gap: 0.5rem;
 
       label {
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: #d4d4d8;
+        font-size: 0.675rem;
+        font-weight: 400;
+        color: #a0a0a0;
       }
 
       input {
@@ -149,6 +170,45 @@
 
         &:hover {
           border-color: #52525b;
+        }
+      }
+
+      .password-input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        input {
+          padding-right: 2.75rem;
+        }
+
+        .password-toggle-btn {
+          position: absolute;
+          right: 0.75rem;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: opacity 0.2s ease;
+
+          img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+          }
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          &:active {
+            opacity: 1;
+          }
         }
       }
     }
