@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import "./Auth.scss";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
+import AuthLeftSection from "../components/AuthLeftSection";
 
 const Auth = () => {
   const [params, setParams] = useSearchParams();
@@ -14,7 +15,11 @@ const Auth = () => {
 
   return (
     <div className="auth-container">
+      <div className="leftSection">
+        <AuthLeftSection/>
+      </div>
       <AnimatePresence mode="wait">
+        <div className="rightSection">
         {mode === "login" ? (
           <motion.div
             key="login"
@@ -39,6 +44,7 @@ const Auth = () => {
             />
           </motion.div>
         )}
+        </div>
       </AnimatePresence>
     </div>
   );
